@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
  const SignedInLinks = () => {
+
     return (
     <ul className="right">
       <li><NavLink to='/'>New Project</NavLink></li>
@@ -11,4 +12,5 @@ import { NavLink } from 'react-router-dom'
     </ul>
     )
 }
+
 export default SignedInLinks

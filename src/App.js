@@ -11,6 +11,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+
           <Switch>
 
             <Route exact path='/' component={Dashboard} />

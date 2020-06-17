@@ -47,4 +47,4 @@ import { createProject } from '../actions/projectActions'
         createProject: (project) => dispatch(createProject(project))
     }
 }
-export default connect(mapDispatchtoProps)(CreateProject)
+export default connect(null, mapDispatchtoProps)(CreateProject)

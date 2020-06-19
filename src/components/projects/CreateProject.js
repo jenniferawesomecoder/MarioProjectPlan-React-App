@@ -16,7 +16,7 @@ import { createProject } from '../actions/projectActions'
 
     handleSubmit = (e) => {
         e.preventDefault(e);
-        console.log(this.state);
+        this.props.createProject(this.state);
     }
     render() {
         return (

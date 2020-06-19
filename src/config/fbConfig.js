@@ -4,18 +4,18 @@ import 'firebase/auth'
 
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBr4HGj5gYKJotb0CcDdiVqleuzyHMZbeE",
-    authDomain: "projectblah-89b4b.firebaseapp.com",
-    databaseURL: "https://projectblah-89b4b.firebaseio.com",
-    projectId: "projectblah-89b4b",
-    storageBucket: "projectblah-89b4b.appspot.com",
-    messagingSenderId: "955177685139",
-    appId: "1:955177685139:web:3fd0ba2353fff89d3f3d66",
-    measurementId: "G-1ZQ314XBF4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.firestore().settings({ timestampsInSnapshotes: true})
-  firebase.analytics();
+  apiKey: "AIzaSyA7mhmB6UEYa9QLkWzZXeGpgDgBg6uqpBU",
+  authDomain: "projectplan-30217.firebaseapp.com",
+  databaseURL: "https://projectplan-30217.firebaseio.com",
+  projectId: "projectplan-30217",
+  storageBucket: "projectplan-30217.appspot.com",
+  messagingSenderId: "730750889688",
+  appId: "1:730750889688:web:24e61ed8a0adfd294bb1ad",
+  measurementId: "G-06W1HMZE8R"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+  firebase.firestore().settings({ timestampsInSnapshots: true})
+ 
 
-  export default firebase;
+  export default firebase

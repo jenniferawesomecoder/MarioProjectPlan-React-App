@@ -19,6 +19,7 @@ import { signIn } from '../actions/authActions'
         this.props.signIn(this.state);
     }
     render() {
+        const { authError } =this.props;
         return (
             <div className="container">
              <form onSubmit={this.handleSubmit} className="white">
@@ -33,11 +34,20 @@ import { signIn } from '../actions/authActions'
                  </div>
                  <div className="input-field">
                      <button className="btn pink lighten-1 z-depth z-depth-0">Login</button>
+                     <div className="red-text center">
+                      { authError ? <p>{authError}</p>: null }
+                     </div>
                  </div>
              </form>
                 
             </div>
         )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError
     }
 }
 
@@ -48,4 +58,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(null, mapDispatchToProps)(SignIn)
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)

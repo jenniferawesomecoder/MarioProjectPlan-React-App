@@ -12,9 +12,9 @@ const ProjectList = ({projects}) => {
               <ProjectSummary project={project} />
             </Link>
           )
-        })}  
+        })}
       </div>
     )
   }
-  
+
   export default ProjectList

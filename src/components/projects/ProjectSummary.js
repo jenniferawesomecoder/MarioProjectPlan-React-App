@@ -4,12 +4,21 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { deleteProject } from '../actions/projectActions'
+import { useHistory } from 'react-router'
 
 const ProjectSummary = ({ project, deleteProject }) => {
+  const history = useHistory();
+
   const handleDelete = e => {
     e.preventDefault();
     const { id } = project;
     deleteProject(id);
+  }
+
+  const handleEdit = e => {
+    e.preventDefault();
+    const { id } = project;
+    history.push(`/${id}/edit`)
   }
 
   return (
@@ -20,7 +29,8 @@ const ProjectSummary = ({ project, deleteProject }) => {
         <p className="grey-text">{moment(project.createdAt.toDate()).calendar()}</p>
       </div>
 
-      <span onClick={(e) => handleDelete(e, project)}>Delete</span>
+      <span className="m-3" onClick={handleDelete}>Delete</span>
+      <span className="m-3" onClick={handleEdit}>Edit</span>
     </div>
   )
 }

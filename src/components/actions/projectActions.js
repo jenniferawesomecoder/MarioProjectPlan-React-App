@@ -17,6 +17,16 @@ export const createProject = (project) => {
   }
 };
 
+export const updateProject = (project, id) => {
+  return (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+
+    firestore.collection('projects').doc(id).update({
+      ...project
+    });
+  }
+};
+
 export const deleteProject = id => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
